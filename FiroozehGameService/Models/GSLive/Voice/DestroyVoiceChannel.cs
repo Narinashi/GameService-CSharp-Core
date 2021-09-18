@@ -28,12 +28,12 @@ namespace FiroozehGameService.Models.GSLive.Voice
     ///     Represents DestroyVoiceChannel Data Model In GameService Voice System
     /// </summary>
     [Serializable]
-    internal class DestroyVoiceChannel
+    public class DestroyVoiceChannel
     {
         /// <summary>
         ///     Gets the Voice Channel
         /// </summary>
         /// <value> the Voice Channel</value>
-        [JsonProperty("0")] internal VoiceChannel VoiceChannel;
+        [JsonProperty("0")] public VoiceChannel VoiceChannel;
     }
 }

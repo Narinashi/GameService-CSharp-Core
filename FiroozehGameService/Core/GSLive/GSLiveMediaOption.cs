@@ -29,14 +29,14 @@ namespace FiroozehGameService.Core.GSLive
     /// <summary>
     ///     Represents GSLive Media Option
     /// </summary>
-    internal class GSLiveMediaOption
+    public class GSLiveMediaOption
     {
         /// <summary>
         ///     Represents GSLiveMedia VoiceOption
         /// </summary>
         public class VoiceOption
         {
-            internal VoiceOption()
+            public VoiceOption()
             {
             }
 
@@ -46,7 +46,7 @@ namespace FiroozehGameService.Core.GSLive
             /// <param name="uniqueKey">(NOTNULL)Specifies the VoiceChannel Unique Key</param>
             /// <param name="channelName">(NOTNULL)Specifies the VoiceChannel Name</param>
             /// <param name="channelDescription">Specifies the VoiceChannel Description</param>
-            internal VoiceOption(string uniqueKey, string channelName, string channelDescription = null)
+            public VoiceOption(string uniqueKey, string channelName, string channelDescription = null)
             {
                 if (string.IsNullOrEmpty(uniqueKey))
                     throw new GameServiceException("uniqueKey Cant Be NullOrEmpty")
@@ -81,9 +81,9 @@ namespace FiroozehGameService.Core.GSLive
                 Desc = channelDescription;
             }
 
-            internal string UniqueKey { get; }
-            internal string Name { get; }
-            internal string Desc { get; }
+            public string UniqueKey { get; }
+            public string Name { get; }
+            public string Desc { get; }
         }
     }
 }

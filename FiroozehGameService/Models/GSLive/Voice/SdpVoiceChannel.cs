@@ -28,24 +28,24 @@ namespace FiroozehGameService.Models.GSLive.Voice
     ///     Represents SdpVoiceChannel Data Model In GameService Voice System
     /// </summary>
     [Serializable]
-    internal class SdpVoiceChannel
+    public class SdpVoiceChannel
     {
         /// <summary>
         ///     Gets the Voice Channel Member
         /// </summary>
         /// <value> the Voice Channel Member</value>
-        [JsonProperty("1")] internal Member Member;
+        [JsonProperty("1")] public Member Member;
 
         /// <summary>
         ///     Gets the Voice Channel Sdp
         /// </summary>
         /// <value> the Voice Channel Sdp</value>
-        [JsonProperty("2")] internal string Sdp;
+        [JsonProperty("2")] public string Sdp;
 
         /// <summary>
         ///     Gets the Voice Channel
         /// </summary>
         /// <value> the Voice Channel</value>
-        [JsonProperty("0")] internal VoiceChannel VoiceChannel;
+        [JsonProperty("0")] public VoiceChannel VoiceChannel;
     }
 }

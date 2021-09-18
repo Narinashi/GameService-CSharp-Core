@@ -27,20 +27,20 @@ namespace FiroozehGameService.Models.GSLive.Providers
     /// <summary>
     ///     Represents Game Service Voice System
     /// </summary>
-    internal abstract class GsLiveVoiceProvider
+    public abstract class GsLiveVoiceProvider
     {
         /// <summary>
         ///     Create Voice Channel With Options
         /// </summary>
         /// <param name="option">(NOTNULL)Voice Option</param>
-        internal abstract void CreateChannel(GSLiveMediaOption.VoiceOption option);
+        public abstract void CreateChannel(GSLiveMediaOption.VoiceOption option);
 
 
         /// <summary>
         ///     Join Voice Channel With channel Unique Key
         /// </summary>
         /// <param name="channelKey">(NOTNULL)the channel Unique Key</param>
-        internal abstract void JoinChannel(string channelKey);
+        public abstract void JoinChannel(string channelKey);
 
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace FiroozehGameService.Models.GSLive.Providers
         ///     NOTE : You must Joined a Voice Channel Before
         /// </summary>
         /// <param name="channelId">(NOTNULL)the channel Id</param>
-        internal abstract void LeaveChannel(string channelId);
+        public abstract void LeaveChannel(string channelId);
 
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace FiroozehGameService.Models.GSLive.Providers
         /// <param name="channelId">(NOTNULL)the channel Id</param>
         /// <param name="memberId">(NOTNULL)the member id you want to kick it</param>
         /// <param name="permanent">kick permanently</param>
-        internal abstract void KickMember(string channelId, string memberId, bool permanent);
+        public abstract void KickMember(string channelId, string memberId, bool permanent);
 
 
         /// <summary>
@@ -66,14 +66,14 @@ namespace FiroozehGameService.Models.GSLive.Providers
         ///     NOTE : You must Joined a Voice Channel Before, and You Must be Creator
         /// </summary>
         /// <param name="channelId">(NOTNULL)the channel Id</param>
-        internal abstract void DestroyChannel(string channelId);
+        public abstract void DestroyChannel(string channelId);
 
 
         /// <summary>
         ///     Get Voice Channel Info
         /// </summary>
         /// <param name="channelKey">(NOTNULL)the channel Unique Key</param>
-        internal abstract void GetChannelInfo(string channelKey);
+        public abstract void GetChannelInfo(string channelKey);
 
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace FiroozehGameService.Models.GSLive.Providers
         /// </summary>
         /// <param name="channelId">(NOTNULL)the channel Id</param>
         /// <param name="isMuted">mute status</param>
-        internal abstract void MuteSelf(string channelId, bool isMuted);
+        public abstract void MuteSelf(string channelId, bool isMuted);
 
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace FiroozehGameService.Models.GSLive.Providers
         /// </summary>
         /// <param name="channelId">(NOTNULL)the channel Id</param>
         /// <param name="isDeafened">deafen status</param>
-        internal abstract void DeafenSelf(string channelId, bool isDeafened);
+        public abstract void DeafenSelf(string channelId, bool isDeafened);
 
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace FiroozehGameService.Models.GSLive.Providers
         /// </summary>
         /// <param name="channelId">(NOTNULL)the channel Id</param>
         /// <param name="ice">ice data</param>
-        internal abstract void Trickle(string channelId, string ice);
+        public abstract void Trickle(string channelId, string ice);
 
 
         /// <summary>
@@ -109,6 +109,6 @@ namespace FiroozehGameService.Models.GSLive.Providers
         /// </summary>
         /// <param name="channelId">(NOTNULL)the channel Id</param>
         /// <param name="sdp">sdp data</param>
-        internal abstract void Offer(string channelId, string sdp);
+        public abstract void Offer(string channelId, string sdp);
     }
 }

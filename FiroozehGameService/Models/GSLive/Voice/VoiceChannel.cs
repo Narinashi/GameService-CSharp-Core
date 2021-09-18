@@ -28,48 +28,48 @@ namespace FiroozehGameService.Models.GSLive.Voice
     ///     Represents VoiceChannel Data Model In GameService Voice System
     /// </summary>
     [Serializable]
-    internal class VoiceChannel
+    public class VoiceChannel
     {
         /// <summary>
         ///     Gets the Voice Channel Created time
         /// </summary>
         /// <value>the Voice Channel Created time</value>
-        [JsonProperty("5")] internal DateTimeOffset ChannelCreatedAt;
+        [JsonProperty("5")] public DateTimeOffset ChannelCreatedAt;
 
         /// <summary>
         ///     Gets the Voice Channel CreatorMemberId
         /// </summary>
         /// <value>the Voice Channel CreatorMemberId</value>
-        [JsonProperty("4")] internal string ChannelCreatorMemberId;
+        [JsonProperty("4")] public string ChannelCreatorMemberId;
 
         /// <summary>
         ///     Gets the Voice Channel Description
         /// </summary>
         /// <value>the Voice Channel Description</value>
-        [JsonProperty("3")] internal string ChannelDescription;
+        [JsonProperty("3")] public string ChannelDescription;
 
         /// <summary>
         ///     Gets the Voice Channel Game Id
         /// </summary>
         /// <value>the Voice Channel Game Id</value>
-        [JsonProperty("6")] internal string ChannelGameId;
+        [JsonProperty("6")] public string ChannelGameId;
 
         /// <summary>
         ///     Gets the Voice Channel Id
         /// </summary>
         /// <value>the Voice Channel Id</value>
-        [JsonProperty("0")] internal string ChannelId;
+        [JsonProperty("0")] public string ChannelId;
 
         /// <summary>
         ///     Gets the Voice Channel Key
         /// </summary>
         /// <value>the Voice Channel Key</value>
-        [JsonProperty("1")] internal string ChannelKey;
+        [JsonProperty("1")] public string ChannelKey;
 
         /// <summary>
         ///     Gets the Voice Channel Name
         /// </summary>
         /// <value>the Voice Channel Name</value>
-        [JsonProperty("2")] internal string ChannelName;
+        [JsonProperty("2")] public string ChannelName;
     }
 }

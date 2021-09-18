@@ -68,7 +68,7 @@ namespace FiroozehGameService.Core.Providers.GSLive
             return _chat;
         }
 
-        internal override GsLiveVoiceProvider Voice()
+        public override GsLiveVoiceProvider Voice()
         {
             return _voice;
         }

@@ -28,31 +28,31 @@ namespace FiroozehGameService.Models.GSLive.Voice
     ///     Represents VoiceChannelMember Data Model In GameService Voice System
     /// </summary>
     [Serializable]
-    internal class VoiceChannelMember
+    public class VoiceChannelMember
     {
         /// <summary>
         ///     Gets the Member Voice Deafen Status
         /// </summary>
         /// <value>the  Member Voice Deafen Status</value>
-        [JsonProperty("2")] internal bool IsDeafen;
+        [JsonProperty("2")] public bool IsDeafen;
 
 
         /// <summary>
         ///     Gets the Member Kicked Status
         /// </summary>
         /// <value>the  Member Kicked Status</value>
-        [JsonProperty("3")] internal bool IsKickedPermanently;
+        [JsonProperty("3")] public bool IsKickedPermanently;
 
         /// <summary>
         ///     Gets the Member Voice Mute Status
         /// </summary>
         /// <value>the Member Voice Mute Status</value>
-        [JsonProperty("1")] internal bool IsMuted;
+        [JsonProperty("1")] public bool IsMuted;
 
         /// <summary>
         ///     Gets the Member Data
         /// </summary>
         /// <value>the Member Data</value>
-        [JsonProperty("0")] internal Member Member;
+        [JsonProperty("0")] public Member Member;
     }
 }

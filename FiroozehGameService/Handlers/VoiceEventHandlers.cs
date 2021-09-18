@@ -28,60 +28,60 @@ namespace FiroozehGameService.Handlers
     /// <summary>
     ///     Represents VoiceEventHandlers
     /// </summary>
-    internal class VoiceEventHandlers
+    public class VoiceEventHandlers
     {
         /// <summary>
         ///     Calls When Create Voice Channel Received
         ///     <see cref="GsLiveVoiceProvider.CreateChannel" />
         /// </summary>
-        internal static EventHandler<VoiceChannel> CreateChannelReceived;
+        public static EventHandler<VoiceChannel> CreateChannelReceived;
 
 
         /// <summary>
         ///     Calls When Join Voice Channel Received
         ///     <see cref="GsLiveVoiceProvider.JoinChannel" />
         /// </summary>
-        internal static EventHandler<JoinVoiceChannel> JoinChannelReceived;
+        public static EventHandler<JoinVoiceChannel> JoinChannelReceived;
 
 
         /// <summary>
         ///     Calls When Leave Voice Channel Received
         ///     <see cref="GsLiveVoiceProvider.LeaveChannel" />
         /// </summary>
-        internal static EventHandler<LeaveVoiceChannel> LeftMemberReceived;
+        public static EventHandler<LeaveVoiceChannel> LeftMemberReceived;
 
 
         /// <summary>
         ///     Calls When Destroy Voice Channel Received
         ///     <see cref="GsLiveVoiceProvider.DestroyChannel" />
         /// </summary>
-        internal static EventHandler<DestroyVoiceChannel> DestroyChannelReceived;
+        public static EventHandler<DestroyVoiceChannel> DestroyChannelReceived;
 
 
         /// <summary>
         ///     Calls When Info Voice Channel Received
         ///     <see cref="GsLiveVoiceProvider.GetChannelInfo" />
         /// </summary>
-        internal static EventHandler<VoiceChannelInfo> InfoChannelReceived;
+        public static EventHandler<VoiceChannelInfo> InfoChannelReceived;
 
 
         /// <summary>
         ///     Calls When Mute Voice Channel Received
         /// </summary>
-        internal static EventHandler<MuteMemberVoiceChannel> MuteMemberReceived;
+        public static EventHandler<MuteMemberVoiceChannel> MuteMemberReceived;
 
 
         /// <summary>
         ///     Calls When Deafen Voice Channel Received
         /// </summary>
-        internal static EventHandler<DeafenMemberVoiceChannel> DeafenMemberReceived;
+        public static EventHandler<DeafenMemberVoiceChannel> DeafenMemberReceived;
 
 
         /// <summary>
         ///     Calls When Kick Voice Channel Received
         ///     <see cref="GsLiveVoiceProvider.KickMember" />
         /// </summary>
-        internal static EventHandler<KickMemberVoiceChannel> KickMemberReceived;
+        public static EventHandler<KickMemberVoiceChannel> KickMemberReceived;
 
         /// <summary>
         ///     Calls When An New Error Received From Server
@@ -92,12 +92,12 @@ namespace FiroozehGameService.Handlers
         /// <summary>
         ///     Calls When Offer Voice Channel Received
         /// </summary>
-        internal static EventHandler<SdpVoiceChannel> AnswerMemberReceived;
+        public static EventHandler<SdpVoiceChannel> AnswerMemberReceived;
 
 
         /// <summary>
         ///     Calls When Trickle Voice Channel Received
         /// </summary>
-        internal static EventHandler<IceVoiceChannel> TrickleMemberReceived;
+        public static EventHandler<IceVoiceChannel> TrickleMemberReceived;
     }
 }

@@ -30,9 +30,9 @@ using FiroozehGameService.Utils;
 
 namespace FiroozehGameService.Core.Providers.GSLive
 {
-    internal class GsLiveVoice : GsLiveVoiceProvider
+    public class GsLiveVoice : GsLiveVoiceProvider
     {
-        internal override void CreateChannel(GSLiveMediaOption.VoiceOption option)
+        public override void CreateChannel(GSLiveMediaOption.VoiceOption option)
         {
             if (GameService.IsGuest)
                 throw new GameServiceException("This Function Not Working In Guest Mode").LogException<GsLiveVoice>(
@@ -45,7 +45,7 @@ namespace FiroozehGameService.Core.Providers.GSLive
             GameService.GSLive.GetGsHandler().CommandHandler.Send(CreateVoiceChannelHandler.Signature, option);
         }
 
-        internal override void JoinChannel(string channelKey)
+        public override void JoinChannel(string channelKey)
         {
             if (GameService.IsGuest)
                 throw new GameServiceException("This Function Not Working In Guest Mode").LogException<GsLiveVoice>(
@@ -65,7 +65,7 @@ namespace FiroozehGameService.Core.Providers.GSLive
             GameService.GSLive.GetGsHandler().CommandHandler.Send(JoinVoiceChannelHandler.Signature, channelKey);
         }
 
-        internal override void LeaveChannel(string channelId)
+        public override void LeaveChannel(string channelId)
         {
             if (GameService.IsGuest)
                 throw new GameServiceException("This Function Not Working In Guest Mode").LogException<GsLiveVoice>(
@@ -81,7 +81,7 @@ namespace FiroozehGameService.Core.Providers.GSLive
             GameService.GSLive.GetGsHandler().CommandHandler.Send(LeaveVoiceChannelHandler.Signature, channelId);
         }
 
-        internal override void KickMember(string channelId, string memberId, bool permanent)
+        public override void KickMember(string channelId, string memberId, bool permanent)
         {
             if (GameService.IsGuest)
                 throw new GameServiceException("This Function Not Working In Guest Mode").LogException<GsLiveVoice>(
@@ -101,7 +101,7 @@ namespace FiroozehGameService.Core.Providers.GSLive
                 new VoicePayload(channelId, memberId: memberId, isPermanent: permanent));
         }
 
-        internal override void DestroyChannel(string channelId)
+        public override void DestroyChannel(string channelId)
         {
             if (GameService.IsGuest)
                 throw new GameServiceException("This Function Not Working In Guest Mode").LogException<GsLiveVoice>(
@@ -116,7 +116,7 @@ namespace FiroozehGameService.Core.Providers.GSLive
             GameService.GSLive.GetGsHandler().CommandHandler.Send(DestroyVoiceChannelHandler.Signature, channelId);
         }
 
-        internal override void GetChannelInfo(string channelKey)
+        public override void GetChannelInfo(string channelKey)
         {
             if (GameService.IsGuest)
                 throw new GameServiceException("This Function Not Working In Guest Mode").LogException<GsLiveVoice>(
@@ -129,7 +129,7 @@ namespace FiroozehGameService.Core.Providers.GSLive
             GameService.GSLive.GetGsHandler().CommandHandler.Send(GetVoiceChannelInfoHandler.Signature, channelKey);
         }
 
-        internal override void MuteSelf(string channelId, bool isMuted)
+        public override void MuteSelf(string channelId, bool isMuted)
         {
             if (GameService.IsGuest)
                 throw new GameServiceException("This Function Not Working In Guest Mode").LogException<GsLiveVoice>(
@@ -146,7 +146,7 @@ namespace FiroozehGameService.Core.Providers.GSLive
                 new VoicePayload(channelId, isMute: isMuted));
         }
 
-        internal override void DeafenSelf(string channelId, bool isDeafened)
+        public override void DeafenSelf(string channelId, bool isDeafened)
         {
             if (GameService.IsGuest)
                 throw new GameServiceException("This Function Not Working In Guest Mode").LogException<GsLiveVoice>(
@@ -162,7 +162,7 @@ namespace FiroozehGameService.Core.Providers.GSLive
                 new VoicePayload(channelId, isDeafen: isDeafened));
         }
 
-        internal override void Trickle(string channelId, string ice)
+        public override void Trickle(string channelId, string ice)
         {
             if (GameService.IsGuest)
                 throw new GameServiceException("This Function Not Working In Guest Mode").LogException<GsLiveVoice>(
@@ -183,7 +183,7 @@ namespace FiroozehGameService.Core.Providers.GSLive
                 new VoicePayload(channelId, ice: ice));
         }
 
-        internal override void Offer(string channelId, string sdp)
+        public override void Offer(string channelId, string sdp)
         {
             if (GameService.IsGuest)
                 throw new GameServiceException("This Function Not Working In Guest Mode").LogException<GsLiveVoice>(

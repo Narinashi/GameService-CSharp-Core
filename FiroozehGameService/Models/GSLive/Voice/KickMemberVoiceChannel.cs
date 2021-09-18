@@ -28,24 +28,24 @@ namespace FiroozehGameService.Models.GSLive.Voice
     ///     Represents KickMemberVoiceChannel Data Model In GameService Voice System
     /// </summary>
     [Serializable]
-    internal class KickMemberVoiceChannel
+    public class KickMemberVoiceChannel
     {
         /// <summary>
         ///     Gets the Voice Channel Kicked Member Status
         /// </summary>
         /// <value>the Voice Channel Kicked Member Status</value>
-        [JsonProperty("2")] internal bool IsPermanent;
+        [JsonProperty("2")] public bool IsPermanent;
 
         /// <summary>
         ///     Gets the Voice Channel Kicked Member
         /// </summary>
         /// <value>the Voice Channel Kicked Member</value>
-        [JsonProperty("1")] internal Member KickedMember;
+        [JsonProperty("1")] public Member KickedMember;
 
         /// <summary>
         ///     Gets the Voice Channel
         /// </summary>
         /// <value> the Voice Channel</value>
-        [JsonProperty("0")] internal VoiceChannel VoiceChannel;
+        [JsonProperty("0")] public VoiceChannel VoiceChannel;
     }
 }

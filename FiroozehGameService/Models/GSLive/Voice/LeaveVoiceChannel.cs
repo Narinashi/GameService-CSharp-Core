@@ -28,18 +28,18 @@ namespace FiroozehGameService.Models.GSLive.Voice
     ///     Represents LeaveVoiceChannel Data Model In GameService Voice System
     /// </summary>
     [Serializable]
-    internal class LeaveVoiceChannel
+    public class LeaveVoiceChannel
     {
         /// <summary>
         ///     Gets the Voice Channel Left Member
         /// </summary>
         /// <value>the Voice Channel Left Member</value>
-        [JsonProperty("1")] internal Member LeftMember;
+        [JsonProperty("1")] public Member LeftMember;
 
         /// <summary>
         ///     Gets the Voice Channel
         /// </summary>
         /// <value> the Voice Channel</value>
-        [JsonProperty("0")] internal VoiceChannel VoiceChannel;
+        [JsonProperty("0")] public VoiceChannel VoiceChannel;
     }
 }
